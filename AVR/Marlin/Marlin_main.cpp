@@ -3113,7 +3113,7 @@ void process_commands()
       previous_millis_cmd = millis();
       endstops_hit_on_purpose();
       break;
-#if 0
+#if 0 //disable original G29 AND G30
 #ifdef ENABLE_AUTO_BED_LEVELING
     case 29: // G29 Detailed Z-Probe, probes the bed at 3 or more points.
         {
@@ -4653,7 +4653,7 @@ Sigma_Exit:
       }
 	  #endif
       break;
-#if 0
+#if 0 //disable original m665 and m666
     #ifdef DELTA
 	case 665: // M665 set delta configurations L<diagonal_rod> R<delta_radius> S<segments_per_sec>
 		if(code_seen('L')) {
